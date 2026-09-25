@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Dierenpagina</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #87ceeb 0%, #b3e5fc 60%, #a5d6a7 60%, #81c784 100%);
+    font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+
+  h1 {
+    color: #33691e;
+    text-shadow: 2px 2px 0 #fff;
+    margin-bottom: 40px;
+  }
+
+  .dieren {
+    display: flex;
+    gap: 80px;
+  }
+
+  .dier {
+    font-size: 100px;
+    animation: hop 1.2s ease-in-out infinite;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .dier:hover {
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  .kat {
+    animation-delay: 0s;
+  }
+
+  .hond {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+  }
+
+  .zon {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    font-size: 60px;
+    animation: draai 8s linear infinite;
+  }
+
+  @keyframes draai {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="zon">☀️</div>
+  <h1>Mijn favoriete dieren 🐾</h1>
+  <div class="dieren">
+    <span class="dier kat">🐱</span>
+    <span class="dier hond">🐶</span>
+  </div>
+</body>
+</html>
